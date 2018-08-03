@@ -10,7 +10,4 @@ angular.module('myApp.tool', [
     templateUrl: 'tool/view/tool.html',
     controller: 'toolCtrl'
   });
-}])
-.controller('toolCtrl', ['$scope', function($scope) {
-    $scope.tool = "I am a tool page";
 }]);
