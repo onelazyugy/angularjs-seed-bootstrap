@@ -6,7 +6,4 @@ angular.module('myApp.rental', ['ngRoute'])
     templateUrl: 'rental/view/rental.html',
     controller: 'rentalCtrl'
   });
-}])
-.controller('rentalCtrl', ['$scope', function($scope) {
-    $scope.rental = "I am a rental page";
 }]);

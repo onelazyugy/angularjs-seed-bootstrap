@@ -1,18 +1,15 @@
 <div class="row">
         <div class="col-md-12">
-            {{tool}}
+            {{ message }}
             <tool></tool>
-            <div>{{ tool | reverse }}</div>
-            <!-- <form>
+            <div>{{ message | reverse }}</div>
+            <div>{{ tools | json}}</div>
+            <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <label for="tool">Tool Name</label>
+                    <input ng-model="toolName" type="text" class="form-control" id="tool" placeholder="tool">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form> -->
+                <button type="button" class="btn btn-primary" ng-click="addTool()">Add Tool</button>
+            </form>
         </div>
     </div>
