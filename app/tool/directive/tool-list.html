@@ -1,23 +1,29 @@
 <div class="table-responsive">
     <h4 class="text-center">{{title}}</h4> 
-    <table class="table">
+    <table class="table table-condensed">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Image</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td ng-if="tools.length === 0">No tool available for rent</td>
+            </tr>
             <tr ng-repeat="tool in tools">
-                <td>{{tool.id}}</td>
                 <td>{{tool.name}}</td>
                 <td>{{tool.price}}</td>
                 <td>
                     <div>
                         <img ng-src={{tool.image}} alt="tool.name">
                     </div>
+                </td>
+                <td>
+                    <span ng-click="remove(tool.id)" title="remove" style="cursor: pointer;"><img src="https://findicons.com/files/icons/573/must_have/24/remove.png" alt="remove"></span>
+                    <span ng-click="edit()" title="edit" style="cursor: pointer;"><img src="https://findicons.com/files/icons/1688/web_blog/48/pencil_small.png" alt="edit"></span>
                 </td>
             </tr>
         </tbody>

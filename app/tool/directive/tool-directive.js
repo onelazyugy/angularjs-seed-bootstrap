@@ -9,12 +9,25 @@ angular.module('myApp.tool.tool-directive', [])
             tools: "="
         },
         templateUrl: "tool/directive/tool-list.html",
-        controller: function($scope) {
-            $scope.title = "Available Tools";
-        },
+        controller: ["$scope", "toolService",
+            function($scope, toolService) {
+                $scope.title = "Available Tools";
+                $scope.remove = function(id) {
+                    toolService.removeTool(id);
+                }
+            }
+        ],
         transclude: true,
         replace: true
         
+    }
+}])
+.directive('toolAdd', [function() {
+    return {
+        restrict: "E",
+        scope: {
+
+        }
     }
 }]);
 

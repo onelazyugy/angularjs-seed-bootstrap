@@ -24,6 +24,10 @@ angular.module("myApp.tool").factory("toolService", function(){
     tools.getTools = function () {
         return tools;
     }
+
+    tools.removeTool = function (id) { 
+        _.pullAllBy(tools, [{'id': id}], 'id');
+    }
     
     return tools;
 })

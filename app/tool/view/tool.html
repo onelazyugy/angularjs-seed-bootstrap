@@ -1,13 +1,21 @@
 <div class="row">
     <div class="col-md-12">
         <tool-list tools="tools"></tool-list>
+        <h4 class="text-center">{{title}}</h4>
         <form>
             <div class="form-group">
-                <label for="tool">Tool Name</label>
-                <input ng-model="toolName" type="text" class="form-control" id="tool" placeholder="tool">
+                <label for="tool">Name</label>
+                <input ng-model="toolName" type="text" class="form-control" id="toolName" placeholder="name">
             </div>
-            <button type="button" class="btn btn-primary" ng-click="addTool()">Add Tool</button>
+            <div class="form-group">
+                <label for="tool">Price</label>
+                <input ng-model="toolPrice" type="text" class="form-control" id="toolPrice" placeholder="price">
+            </div>
+            <div class="form-group">
+                <label for="tool">Image</label>
+                <input ng-model="toolImage" type="text" class="form-control" id="toolImage" placeholder="image path">
+            </div>
+            <button type="button" class="btn btn-primary float-right" ng-click="addTool()">Add Tool</button>
         </form>
-        
     </div>
 </div>

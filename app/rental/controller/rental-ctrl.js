@@ -1,4 +1,4 @@
 angular.module("myApp.rental").controller("rentalCtrl", ["$scope", "toolService", function($scope, toolService){
-    $scope.rental = "I am a rental page";
-    $scope.tools = toolService.getTools();
+    $scope.title = "Tool For Rent";
+    $scope.tools = toolService.getTools().length === 0 ? 'No tool available' : toolService.getTools();
 }]);

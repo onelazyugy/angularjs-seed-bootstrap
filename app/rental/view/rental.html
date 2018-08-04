@@ -1,8 +1,30 @@
 <div class="row">
     <div class="col-md-12">
-        {{rental}}
-    </div>
-    <div class="col-md-12">
-        {{ tools }}
+        <div class="table-responsive">
+            <h4 class="text-center">{{title}}</h4>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td ng-if="tools.length === 0">No tool available for rent</td>
+                    </tr>
+                    <tr ng-repeat="tool in tools">
+                        <td>{{tool.name}}</td>
+                        <td>{{tool.price}}</td>
+                        <td>
+                            <div>
+                                <img ng-src={{tool.image}} alt="tool.name">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
