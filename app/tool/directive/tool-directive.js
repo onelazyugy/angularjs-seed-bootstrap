@@ -2,12 +2,21 @@
 
 angular.module('myApp.tool.tool-directive', [])
 
-.directive('tool', function() {
+.directive('toolList', [function() {
     return {
         restrict: "E",
-        template: "<div>I am a tool directive</div>"
+        scope: {
+            tools: "="
+        },
+        templateUrl: "tool/directive/tool-list.html",
+        controller: function($scope) {
+            $scope.title = "Available Tools";
+        },
+        transclude: true,
+        replace: true
+        
     }
-});
+}]);
 
 
 

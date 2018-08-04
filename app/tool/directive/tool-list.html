@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <h4 class="text-center">{{title}}</h4> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tool in tools">
+                <td>{{tool.id}}</td>
+                <td>{{tool.name}}</td>
+                <td>{{tool.price}}</td>
+                <td>
+                    <div>
+                        <img ng-src={{tool.image}} alt="tool.name">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
